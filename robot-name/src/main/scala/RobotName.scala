@@ -2,13 +2,13 @@ import scala.annotation.tailrec
 
 class Robot {
   def reset(): String = {
-    this.name = RandomName.generateName()
+    this.name = Robot.generateName()
     this.name
   }
-  var name = RandomName.generateName()
+  var name = Robot.generateName()
 }
 
-object RandomName {
+object Robot {
    private val usedName = scala.collection.mutable.ListBuffer.empty[String]
 
    @tailrec
